@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8hy6bddqntv0"]
+
+[ext_resource type="Script" path="res://canvas_layer.gd" id="1_lx0ep"]
+[ext_resource type="FontFile" uid="uid://cg84gghqgeipp" path="res://assets/font.ttf" id="2_o4lso"]
+
+[node name="Start" type="CanvasLayer"]
+script = ExtResource("1_lx0ep")
+
+[node name="Btn" type="Button" parent="."]
+offset_left = 330.0
+offset_top = 500.0
+offset_right = 551.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("2_o4lso")
+theme_override_font_sizes/font_size = 100
+text = "Play"
+
+[connection signal="pressed" from="Btn" to="." method="_on_btn_pressed"]
